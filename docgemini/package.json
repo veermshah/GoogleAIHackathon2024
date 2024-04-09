@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "docgemini",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +9,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "serve": "^14.2.1",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.6.0",
     "workbox-broadcast-update": "^6.6.0",

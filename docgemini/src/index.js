@@ -15,10 +15,7 @@ root.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
-//serviceWorkerRegistration.unregister();
-serviceWorkerRegistration.register(); //change the service worker registration from 'unregistered' to 'registered'
-//Essentially, changing the service worker from unregistered to registered will allow you to utilize the app 
-//even when it's offline, a key benefit when it comes to PWAs. Check Google's explanation on this topic for more information: https://developers.google.com/web/fundamentals/primers/service-workers/registration
+serviceWorkerRegistration.unregister();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
