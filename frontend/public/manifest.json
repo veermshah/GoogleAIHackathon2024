@@ -1,6 +1,6 @@
 {
-  "short_name": "React PWA",
-  "name": "Create React App PWA",
+  "short_name": "DocGemini",
+  "name": "Doctor Gemini",
   "icons": [
     {
       "src": "favicon.ico",
