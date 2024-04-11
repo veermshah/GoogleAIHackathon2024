@@ -7,7 +7,7 @@ export default function Home() {
       <div style={{marginTop:'40px',justifyContent:'space-around',display:'flex',flexWrap:'wrap', width:'90%', margin:'auto'}}>
         <NavBar />
         <h1 className="text-3xl font-bold underline">
-          Hello world!
+          Doctor Gemini
         </h1>
   
       </div>

@@ -4,50 +4,38 @@ import { Link } from "react-router-dom";
 export default function Navbar(props) {
     return (
         <>
-            <header className="bg-blue-500 p-4">
-                <nav className="flex justify-left space-x-4">
-                    <Link to="/">
+            <header className="fixed bottom-0 left-0 w-full bg-pink-200 text-white p-4 shadow-md">
+                <nav className="flex justify-left space-x-3">
+                    <Link to="/home" className={`text-white px-3 py-2 rounded-lg`}>
                         <img
-                            src={"logo.png"}
-                            alt="Charity Clarity Logo"
-                            className="h-12"
+                            src={"home.jpg"}
+                            alt="Home"
+                            className="h-30 w-30 object-cover"
                         />
                     </Link>
                     <Link
-                        to="/"
-                        className={`text-white px-4 py-2 rounded-lg font-bold text-xl `}
+                        to="/support"
+                        className={`text-white px-3 py-2 rounded-lg font-bold text-xl `}
                     >
-                        Charity Clarity
+                        <img
+                            src={"support.jpg"}
+                            alt="Support"
+                            className="h-30 w-30 object-cover"
+                        />
                     </Link>
-                    <Link
-                        to="/donate"
-                        className={`${
-                            props.active === "donate"
-                                ? "bg-white text-blue-500"
-                                : "text-white"
-                        } px-4 py-2 rounded-full font-bold text-xl hover:bg-white hover:text-blue-500`}
-                    >
-                        Donate
+                    <Link to="/health" className={`text-white px-3 py-2 rounded-lg`}>
+                        <img
+                            src={"bandaid.jpg"}
+                            alt="Health"
+                            className="h-30 w-30 object-cover"
+                        />
                     </Link>
-                    <Link
-                        to="/contributions"
-                        className={` ${
-                            props.active === "contributions"
-                                ? "bg-white text-blue-500"
-                                : "text-white"
-                        } px-4 py-2 rounded-full font-bold text-xl hover:bg-white hover:text-blue-500`}
-                    >
-                        Contributions
-                    </Link>
-                    <Link
-                        to="/impact"
-                        className={` ${
-                            props.active === "impact"
-                                ? "bg-white text-blue-500"
-                                : "text-white"
-                        } px-4 py-2 rounded-full font-bold text-xl hover:bg-white hover:text-blue-500`}
-                    >
-                        Impact
+                    <Link to="/settings" className={`text-white px-3 py-2 rounded-lg`}>
+                        <img
+                            src={"settings.jpg"}
+                            alt="Settings"
+                            className="h-30 w-30 object-cover"
+                        />
                     </Link>
                     <div style={{ width: "600px" }}></div> {/* Spacer */}
                 </nav>
