@@ -27,7 +27,6 @@ export default function SimpleBottomNavigation() {
                 <BottomNavigationAction label="Home" icon={<HomeIcon />} />
                 <BottomNavigationAction label="Doctors" icon={<LocalHospitalIcon />} />
                 <BottomNavigationAction label="Support" icon={<CalendarMonthIcon />} />
-                <BottomNavigationAction label="profile" icon={<AccountCircleIcon />} />
             </BottomNavigation>
         </AppBar>
     </div>
