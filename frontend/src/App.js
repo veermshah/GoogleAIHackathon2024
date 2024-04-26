@@ -6,6 +6,8 @@ import '@fontsource/roboto/700.css';
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import { useEffect, useState } from 'react';
 
 
@@ -14,8 +16,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
           <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/Home" element={<Home />} />
               <Route path="/About" element={<About />} />
+              <Route path="/Signup" element={<Signup />} />
+              <Route path="/" element={<Login />} />
           </Routes>
       </BrowserRouter>
     </div>

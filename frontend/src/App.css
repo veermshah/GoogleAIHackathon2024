@@ -60,3 +60,15 @@
   margin-bottom:130px
   
 }
+
+#login-page{
+  height:100vh;
+  padding-top:0px;
+  padding-bottom:0px;
+  justify-content:flex-start;
+  flex-direction:column-reverse;
+  display:flex;
+  flex-wrap:wrap; 
+  width:100%;
+  margin:auto;
+}
