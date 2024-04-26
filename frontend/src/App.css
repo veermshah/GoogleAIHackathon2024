@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+#home-page {
+  height:100vh;
+  padding-top:0px;
+  padding-bottom:0px;
+  justify-content:flex-start;
+  flex-direction:column-reverse;
+  display:flex;
+  flex-wrap:wrap; 
+  width:100%;
+  margin:auto;
+}
+
+#home-page #spline{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+#home-page .controls{
+  margin-bottom:130px
+  
+}
