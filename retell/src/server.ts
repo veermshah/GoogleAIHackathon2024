@@ -80,6 +80,7 @@ export class Server {
       async (req: Request, res: Response) => {
         // Extract agentId from request body; apiKey should be securely stored and not passed from the client
         const { agent_id } = req.body;
+
         try {
           const callResponse: RegisterCallResponse =
             await this.retellClient.call.register({
@@ -90,6 +91,7 @@ export class Server {
             });
           // Send back the successful response to the client
           res.json(callResponse);
+          console.log("Call registered successfully:", callResponse);
         } catch (error) {
           console.error("Error registering call:", error);
           // Send an error response back to the client

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { RetellWebClient } from "retell-client-js-sdk";
 
-const apiKey = "23cca5c1-1ab8-4d23-bf5b-5357e33720c1";
 const agentId = "1c6d57b200b42ac9f7580ac9344e6077";
+const apiKey = "sk-proj-8RuBzsNWHdxV11YqIaSVT3BlbkFJu8jJN2wIo7UoWzbPDszB";
 
 const webClient = new RetellWebClient();
 
@@ -41,11 +41,11 @@ const Retell = () => {
       webClient.stopConversation();
     } else {
       const registerCallResponse = await registerCall(agentId);
-      if (registerCallResponse.callId) {
+      if (registerCallResponse.call_id) {
         webClient
           .startConversation({
-            callId: registerCallResponse.callId,
-            sampleRate: registerCallResponse.sampleRate,
+            callId: registerCallResponse.call_id,
+            sampleRate: registerCallResponse.sample_rate,
             enableUpdate: true,
           })
           .catch(console.error);
@@ -65,7 +65,7 @@ const Retell = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            agentId: agentId,
+            agent_id: agentId,
           }),
         }
       );
@@ -75,6 +75,7 @@ const Retell = () => {
       }
 
       const data = await response.json();
+      console.log("registerCall response", data);
       return data;
     } catch (err) {
       console.log(err);
