@@ -11,6 +11,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import Login from '../pages/Login';
+import { Navigate } from 'react-router-dom';
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
@@ -64,6 +66,7 @@ export default function MenuAppBar() {
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={() => <Navigate to="/Login" />}>Login </MenuItem>
               </Menu>
             </div>
           )}

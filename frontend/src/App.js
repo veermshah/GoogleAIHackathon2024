@@ -6,20 +6,24 @@ import "@fontsource/roboto/700.css";
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import { useEffect, useState } from "react";
-import Retell from "./pages/Retell";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import { useEffect, useState } from 'react';
+
 
 function App() {
-    return (
-        <div className="App">
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/About" element={<About />} />
-                </Routes>
-            </BrowserRouter>
-        </div>
-    );
+  return (
+    <div className="App">
+      <BrowserRouter>
+          <Routes>
+              <Route path="/Home" element={<Home />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/Signup" element={<Signup />} />
+              <Route path="/" element={<Login />} />
+          </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
