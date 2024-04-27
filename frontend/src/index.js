@@ -31,6 +31,39 @@ root.render(
   </React.StrictMode>
 );
 
+const express = require('express'); 
+const app = express(); 
+const path = require('path');
+const bcrypt = require('bcrypt');
+const collection = require('mongodb');
+
+const templatePath = path.join(__dirname, "./pages");
+ 
+app.use(express.json)
+app.set('view engine', 'js')
+app.set("views", templatePath) 
+
+app.get("/", (req, res) => {
+    res.render("login")
+});
+
+app.get("/signup", (req, res) => {
+    res.render("signup")
+});
+
+//registering the user
+app.post("/signup", async (req, res) => {
+    const data = {
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password
+    }
+
+    // const userData = await collection.insertOne(data);
+    // console.log(userData);
+});
+
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
