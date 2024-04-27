@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../App.css";
-import NavBar from "../components/NavBar";
-import BottomNav from "../components/BottomNav";
-import TopBar from "../components/TopBar";
-import Spline from "@splinetool/react-spline";
-import Fab from "@mui/material/Fab";
-import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import { RetellWebClient } from "retell-client-js-sdk";
 
 const agentId = "06398d28edf4c9a4203924c8a32d4a5b";
-const apiKey = "23cca5c1-1ab8-4d23-bf5b-5357e33720c1";
 
 const webClient = new RetellWebClient();
 
-export default function Home() {
+const App = () => {
     const [isCalling, setIsCalling] = useState(false);
 
     // Initialize the SDK
@@ -44,6 +36,17 @@ export default function Home() {
     }, []);
 
     const toggleConversation = async () => {
+        // const registerCallResponse = await registerCall(agentId);
+        // console.log(registerCallResponse);
+        // console.log(registerCallResponse.call_id);
+
+        // webClient
+        //     .startConversation({
+        //         callId: registerCallResponse.call_id,
+        //         sampleRate: registerCallResponse.sample_rate,
+        //         enableUpdate: true,
+        //     })
+        //     .catch(console.error);
         if (isCalling) {
             webClient.stopConversation();
         } else {
@@ -90,18 +93,14 @@ export default function Home() {
     }
 
     return (
-        <div id="home-page">
-            <TopBar />
-            <Spline
-                id="spline"
-                scene="https://prod.spline.design/T7snCH2ksfMnyUZf/scene.splinecode"
-            />
-            <div className="controls">
-                <Fab color="primary" aria-label="add">
-                    <KeyboardVoiceIcon onClick={toggleConversation} />
-                </Fab>
-            </div>
-            <BottomNav />
+        <div className="App">
+            <header className="App-header">
+                <button onClick={toggleConversation}>
+                    {isCalling ? "Stop" : "Start"}
+                </button>
+            </header>
         </div>
     );
-}
+};
+
+export default App;
