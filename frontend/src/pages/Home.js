@@ -8,7 +8,7 @@ import Fab from "@mui/material/Fab";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import { RetellWebClient } from "retell-client-js-sdk";
 
-const agentId = "06398d28edf4c9a4203924c8a32d4a5b";
+const agentId = "5ef761bf45d22ab2ac6fbc76781346fd";
 const apiKey = "23cca5c1-1ab8-4d23-bf5b-5357e33720c1";
 
 const webClient = new RetellWebClient();
@@ -72,7 +72,7 @@ export default function Home() {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        agent_id: "06398d28edf4c9a4203924c8a32d4a5b",
+                        agent_id: "5ef761bf45d22ab2ac6fbc76781346fd",
                     }),
                 }
             );
@@ -90,18 +90,19 @@ export default function Home() {
     }
 
     return (
-        <div id="home-page">
+        <div id="home-page" className="">
             <TopBar />
             <Spline
                 id="spline"
                 scene="https://prod.spline.design/T7snCH2ksfMnyUZf/scene.splinecode"
+                className="controls"
             />
             <div className="controls">
                 <Fab color="primary" aria-label="add">
                     <KeyboardVoiceIcon onClick={toggleConversation} />
                 </Fab>
             </div>
-            <BottomNav />
+            <BottomNav value={0} />
         </div>
     );
 }

@@ -13,7 +13,6 @@ import { CustomLlmRequest, CustomLlmResponse } from "./types";
 // import { FunctionCallingLlmClient } from "./llms/llm_openai_func_call";
 import { DemoLlmClient } from "./llms/llm_openai";
 
-
 export class Server {
   private httpServer: HTTPServer;
   public app: expressWs.Application;
@@ -35,12 +34,7 @@ export class Server {
     this.handleRegisterCallAPI();
     this.handleWebhook();
 
-    // If you want to create an outbound call with your number
-    // this.twilioClient.CreatePhoneCall(
-    //   "+14157122917",
-    //   "+14157122912",
-    //   "68978b1c29f5ff9c7d7e07e61124d0bb",
-    // );
+  
   }
 
   listen(port: number): void {
